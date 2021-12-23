@@ -14,7 +14,7 @@ const prisma = new PrismaClient({
 ;(async () => {
   expectError(
     await prisma.user.findMany({
-      distinct: ['id', 'mail', 'age', 'followerCount', 'name'],
+      distinct: ['id', 'invalidField', 'age', 'followerCount', 'name'],
     }),
   )
 })()
