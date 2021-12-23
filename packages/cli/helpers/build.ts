@@ -1,5 +1,5 @@
 import type { BuildOptions } from '../../../helpers/compile/build'
-import { run } from '../../../helpers/compile/build'
+import { run } from '../../../helpers/compile/run'
 import { build } from '../../../helpers/compile/build'
 import { copySync } from 'fs-extra'
 import path from 'path'

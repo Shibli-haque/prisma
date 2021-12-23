@@ -208,15 +208,6 @@ function getEsmOutFile(options: BuildOptions) {
   return undefined
 }
 
-// wrapper around execa to run our build cmds
-export function run(command: string) {
-  return execa.command(command, {
-    preferLocal: true,
-    shell: true,
-    stdio: 'inherit',
-  })
-}
-
 // gets the files to be watched from esbuild
 function getWatchedFiles(build: esbuild.BuildIncremental | esbuild.BuildResult | undefined) {
   return Object.keys(build?.metafile?.inputs ?? {})
